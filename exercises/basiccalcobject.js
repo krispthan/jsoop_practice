@@ -1,26 +1,50 @@
 
 class Calculator{
 	constructor(){
-		//takes in nothing
+		this.storeOperator = [];
+		this.storeNumbers=[];
 		//make storage for the operator and the numbers
 	}
-	loadOperator(  ){
+	loadOperator(operator ){
 		//adds the operator to the next calculation
 		//takes in the operator
+
+		this.storeOperator = operator;
+		switch(this.storeOperator){
+			case "+":
+			case "-":
+			case "/":
+			case "*":
+			return true;
+			break;
+			default:
+			return false;
+		}
+	    
 		//checks if it is a valid operation (+-*/)
 			//save the op to the constructor storage
 			//return true
 		//or return false if not the right operator
 	}
-	loadNumber(  ){
+	loadNumber(num1){
 		//takes in a number and stores it as one of the numbers to perform math on
 		//takes in 1 number
 		//checks if it is actually a number and if we have fewer than 2 numbers
+		if(typeof num1 === 'number' && this.storeNumbers.length < 2){
+			this.storeNumber.push(num1);
+			return this.storeNumbers.length;
+	
 		//if it is a number, and we have 2 or fewer numbers, store it
 			//return the number of numbers stored
 		//otherwise return false (too many numbers stored)
 	}
-	calculate(){
+	calculate(num1, operator){
+		calculate.loadNumber(num1){
+			return num1;
+		}
+		calculate.loadNumber(operator){
+			return operator;
+		}
 		//calculate the result of the stored numbers and operator
 		//takes in nothing
 		//calculates with the operator and 2 numbers
