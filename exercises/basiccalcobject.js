@@ -31,7 +31,7 @@ class Calculator{
 		//takes in 1 number
 		//checks if it is actually a number and if we have fewer than 2 numbers
 		if(typeof num1 === 'number' && this.storeNumbers.length < 2){
-			this.storeNumber.push(num1);
+			this.storeNumbers.push(num1);
 			return this.storeNumbers.length;
 		} else{
 			return false;

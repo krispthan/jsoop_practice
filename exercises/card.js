@@ -14,10 +14,16 @@ class Card{
 
 class Deck{
 	constructor(){
+		this.cardObjects=[];
 		//takes in nothing
 		//make storage for your card objects
 	}
 	addCard( suit, faceValue ){
+		this.card.push();
+		getsuit(suit);
+		var newCardObject={};
+		newCardObject.push(cardObjects);
+		return cardObjects;
 		//adds a card to the deck
 		//takes in a string suit and faceValue
 		//makes a new card Object from the Card template
