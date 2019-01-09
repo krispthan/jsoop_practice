@@ -1,13 +1,12 @@
 
 
 class Account{
-	constructor(name, intialAmount){
-		this.name =name;
-		this.amountOfMoney= initialAmount;
+	constructor(){
+		this.amountOfMoney= 0;
 	}
 	add( amount ){
-		this.amount+= amount;
-		return this.amount;
+		this.amountOfMoney+= amount;
+		return this.amountOfMoney;
 
 		//add money to the amount stored in the account
 		//takes in an amount
@@ -15,13 +14,15 @@ class Account{
 		//returns the new amount in the account
 	}
 	remove( amountToRemove ){
-		if(this.amount < this.amountToRemove){
-			this.amount -=amountToRemove;
+		var whatWhatsWithdrawn=0;
+		if(this.amountOfMoney < amountToRemove){
+			whatWhatsWithdrawn= this.amountOfMoney;
+			this.amountOfMoney -=this.amountOfMoney;
 		} else{
-			var returnAmount =this.amount;
-			this.amount = 0;
-			this.returnAmount;
+			whatWhatsWithdrawn=amountToRemove;
+			this.amountOfMoney -=amountToRemove;
 		}
+		 return whatWhatsWithdrawn;
 		//removes funds from an account
 		//check if the amount to withdraw is more than the account
 		//if more, only withdraw the amount in the account, not more
@@ -29,7 +30,7 @@ class Account{
 		//return the amount actually withdrawn
 	}
 	getAmount(){
-		return this.amount;
+		return this.amountOfMoney;
 		//returns the amount in the account
 	}
 }

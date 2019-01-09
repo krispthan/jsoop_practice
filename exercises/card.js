@@ -20,10 +20,11 @@ class Deck{
 	}
 	addCard( suit, faceValue ){
 		this.card.push();
-		getsuit(suit);
+		  getSuit(suit);
+		  getFaceValue(faceValue);
 		var newCardObject={};
-		newCardObject.push(cardObjects);
-		return cardObjects;
+		this.cardObjects.push(newCardObject);
+		return this.cardObjects;
 		//adds a card to the deck
 		//takes in a string suit and faceValue
 		//makes a new card Object from the Card template
@@ -31,16 +32,20 @@ class Deck{
 		//returns the amount of cards currently stored
 	}
 	shuffle(){
+		var randomizeArray = Math.floor(Math.random() * this.cardObjects.length);
 		//reorders the cards in the storage array in a random order
 		//takes in nothing
 		//returns nothing
 	}
 	getCardCount(){
+		return this.cardObjects();
 		//gets the current amount of cards stored
 		//takes in nothing
 		//returns the amount of cards stored in the array in the constructor
 	}
-	dealCards(  ){
+	dealCards(numOfCards ){
+		this.cardObjects.pop(numOfCards);
+		return this.cardObjects.length;
 		//deals out a number of cards
 		//takes in the number of cards to deal
 		//removes that many cards from the deck
